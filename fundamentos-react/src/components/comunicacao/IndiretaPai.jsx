@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import IndiretaFilho from "./IndiretaFilho";
 
 export default function IndiretaPai(props) {
-  let nome = "?";
-  let idade = 0;
-  let gay = false;
+  const [nome, setNome] = useState("?");
+  const [idade, setIdade] = useState(0);
+  const [gay, setGay] = useState(false);
 
-  function fornecerInformacoes(nomeParam, idadeParam, gayParam) {
-    nome = nomeParam;
-    idade = idadeParam;
-    gay = gayParam;
+  function fornecerInformacoes(nome, idade, gay) {
+    setNome(nome);
+    setIdade(idade);
+    setGay(gay);
   }
 
   return (
